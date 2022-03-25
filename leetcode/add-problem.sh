@@ -5,5 +5,8 @@ if [[ -z "${1}" ]] ; then
     exit 1
 fi
 
-mkdir -p $1
+for lang in python go rust erlang ;
+do
+    mkdir -p $1/$lang
+done 
 echo "| [${1}](https://leetcode.com/problems/${1}) | null | null | null | null |" >> README.md
